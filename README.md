@@ -8,11 +8,11 @@ It’s a real-world DevOps-style automation that ensures critical data is secure
 
 ## ⚙️ Key Features
 
-✅ Automated Backups – Schedule periodic backups (daily, weekly, etc.) using cron.
-✅ Compression – Use tar and gzip to minimize backup size.
-✅ Logging – Every operation (start, success, error) is logged to logfile.log.
-✅ AWS Integration – Upload backup files securely to an Amazon S3 bucket.
-✅ Error Handling – Validations for missing directories, AWS CLI, etc.
+✅ Automated Backups – Schedule periodic backups (daily, weekly, etc.) using cron. <br>
+✅ Compression – Use tar and gzip to minimize backup size. <br> 
+✅ Logging – Every operation (start, success, error) is logged to logfile.log. <br>
+✅ AWS Integration – Upload backup files securely to an Amazon S3 bucket. <br>
+✅ Error Handling – Validations for missing directories, AWS CLI, etc. <br>
 
 ---
 
