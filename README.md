@@ -5,3 +5,40 @@ This project demonstrates how to automate data backup and replication from an EC
 It’s a real-world DevOps-style automation that ensures critical data is securely compressed, logged, and replicated to the cloud.
 
 ---
+
+## ⚙️ Key Features
+
+✅ Automated Backups – Schedule periodic backups (daily, weekly, etc.) using cron.
+✅ Compression – Use tar and gzip to minimize backup size.
+✅ Logging – Every operation (start, success, error) is logged to logfile.log.
+✅ AWS Integration – Upload backup files securely to an Amazon S3 bucket.
+✅ Error Handling – Validations for missing directories, AWS CLI, etc.
+
+---
+
+## 🧩 Prerequisites
+
+Before running the script:
+An AWS account with:
+IAM user or IAM role with permissions:
+`AmazonS3FullAccess` and `AmazonSSMFullAccess`
+
+AWS CLI installed and configured:
+```bash
+aws configure
+```
+Linux-based VM (e.g., Ubuntu EC2 instance)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
