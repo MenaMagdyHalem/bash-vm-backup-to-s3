@@ -18,10 +18,10 @@ It’s a real-world DevOps-style automation that ensures critical data is secure
 
 ## 🧩 Prerequisites
 
-Before running the script:
-An AWS account with:
-IAM user or IAM role with permissions:
-`AmazonS3FullAccess` and `AmazonSSMFullAccess`
+Before running the script: <br>
+An AWS account with: <br> 
+IAM user or IAM role with permissions: <br>
+`AmazonS3FullAccess` and `AmazonSSMFullAccess` <br>
 
 AWS CLI installed and configured:
 ```bash
