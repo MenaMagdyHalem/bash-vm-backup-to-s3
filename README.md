@@ -31,6 +31,95 @@ Linux-based VM (e.g., Ubuntu EC2 instance)
 
 ---
 
+## Steps
+## 1️⃣ Create Sample Files and Directories
+```bash
+mkdir ~/bash
+touch ~/bash/file{1..10}
+
+mkdir ~/backup
+touch ~/backup/logfile.log
+```
+
+## 2️⃣ Create the Backup Script
+
+Create a file named `backup-script.sh`
+
+Make it executable:
+```bash
+chmod +x backup-script.sh
+```
+
+## 3️⃣ Test the Script
+
+Run manually:
+```bash
+./backup-script.sh
+```
+
+Expected output:
+```bash
+Backup completed successfully. Backup file: /home/ubuntu/backup/file-backup-09-18-23_15_22_20.tar.gz
+upload: backup/file-backup-09-18-23_15_22_20.tar.gz to s3://s3-new-bash-course/...
+File uploaded successfully to S3 bucket: s3-new-bash-course
+```
+
+## 4️⃣ Automate with Cron
+
+Edit crontab:
+```bash
+sudo vim /etc/crontab
+```
+
+Add this line to run every 2 minutes:
+```bash
+*/2 * * * * root /home/ubuntu/backup-script.sh
+```
+
+Now the script will run automatically every 2 minutes, backup your data, and upload it to S3.
+
+## 5️⃣ Verify the Backup
+
+List backups locally:
+```bash
+ls /home/ubuntu/backup
+```
+
+List backups on S3:
+```bash
+aws s3 ls s3://s3-new-bash-course/
+```
+
+View the log file:
+```bash
+cat /home/ubuntu/backup/logfile.log
+```
+--- 
+
+## 🧰 Tools Used
+
+* Bash scripting
+* AWS CLI
+* Amazon S3
+* cron (Linux scheduling)
+* tar + gzip
+
+---
+
+## 📘 Learning Outcomes
+
+By completing this project, you’ll learn how to:
+* Automate tasks with Bash and cron
+* Integrate AWS CLI with Linux automation
+* Manage and upload compressed backups to S3
+* Implement logging and error handling in scripts
+
+
+## 🧑‍💻 Author
+Mena Halem
+DevOps Instructor | Cloud & Linux Specialist
+
+
 
 
 
